@@ -6,7 +6,7 @@ export default function App() {
       <div className="text-center">
         <p className="text-2xl font-bold">하루, 한 줄</p>
         <p className="pt-1.5 text-slate-400">
-          매일 자신의 하루를 최대 15글자로 간결하게 표현하여 기록해 보세요
+          매일 자신의 하루를 최대 20글자로 간결하게 표현하여 기록해 보세요
         </p>
       </div>
       <MemoList />

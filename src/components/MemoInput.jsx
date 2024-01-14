@@ -8,13 +8,16 @@ export default function MemoInput() {
 
   const addNewMemo = (e) => {
     e.preventDefault();
-    addMemo(value);
-    setValue("");
+
+    if (value.trim()) {
+      addMemo(value);
+      setValue("");
+    }
   };
 
   const maxLenth = (e) => {
-    if (e.target.value.length > 15) {
-      alert("최대 15글자까지 입력이 가능합니다 :)");
+    if (e.target.value.length > 20) {
+      alert("최대 20글자까지 입력이 가능합니다 :)");
     }
   };
 
@@ -41,7 +44,7 @@ export default function MemoInput() {
             ref={inputRef}
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            maxlength="15"
+            maxlength="20"
             onInput={(e) => maxLenth(e)}
           />
           <button className="btn btn-active btn-primary">저장</button>
