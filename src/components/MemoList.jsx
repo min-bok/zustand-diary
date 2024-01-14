@@ -7,8 +7,9 @@ export default function MemoList() {
 
   return (
     <>
+      {/* scrollbar-hide */}
       {!!memoList.length ? (
-        <div className="grid grid-cols-4 gap-4 overflow-y-auto h-4/6 scrollbar-hide min-h-96">
+        <div className="grid grid-cols-4 auto-rows-max gap-4 overflow-y-auto h-4/6">
           {memoList &&
             memoList.map((el) => (
               <Memo key={el.id} id={el.id} date={el.date}>

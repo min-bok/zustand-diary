@@ -1,7 +1,7 @@
 import React from "react";
 import { useMemoStore } from "../store/MemoStore";
 
-export default function Memo({ id, children }) {
+export default function Memo({ id, date, children }) {
   const { removeMemo } = useMemoStore();
 
   const deleteMemo = (id) => {
@@ -32,8 +32,12 @@ export default function Memo({ id, children }) {
             </svg>
           </button>
         </div>
-        <p>{children}</p>
-        {/* <p>{date}</p> */}
+        <div>
+          <p className="text-xl font-bold break-all overflow-hidden whitespace-normal">
+            {children}
+          </p>
+        </div>
+        <p className="flex justify-end items-end">{date}</p>
       </div>
     </div>
   );
