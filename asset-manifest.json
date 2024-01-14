@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/zustand-diary/static/css/main.207e7581.css",
-    "main.js": "/zustand-diary/static/js/main.e42441e8.js",
+    "main.js": "/zustand-diary/static/js/main.3d8f49e5.js",
     "static/js/787.f8fcd2ba.chunk.js": "/zustand-diary/static/js/787.f8fcd2ba.chunk.js",
     "index.html": "/zustand-diary/index.html",
     "main.207e7581.css.map": "/zustand-diary/static/css/main.207e7581.css.map",
-    "main.e42441e8.js.map": "/zustand-diary/static/js/main.e42441e8.js.map",
+    "main.3d8f49e5.js.map": "/zustand-diary/static/js/main.3d8f49e5.js.map",
     "787.f8fcd2ba.chunk.js.map": "/zustand-diary/static/js/787.f8fcd2ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.207e7581.css",
-    "static/js/main.e42441e8.js"
+    "static/js/main.3d8f49e5.js"
   ]
 }
