@@ -3,7 +3,7 @@ import { useMemoStore } from "../store/MemoStore";
 
 export default function MemoInput() {
   const [value, setValue] = useState("");
-  const { addMemo } = useMemoStore();
+  const { addMemo, removeAllMemo } = useMemoStore();
   const inputRef = useRef();
 
   const addNewMemo = (e) => {
@@ -18,9 +18,16 @@ export default function MemoInput() {
     }
   };
 
+  const deleteAllMemo = () => {
+    removeAllMemo();
+    useMemoStore.persist.clearStorage();
+  };
+
   return (
     <div className="flex justify-between">
-      <button className="btn btn-outline btn-primary">모든 일기 삭제</button>
+      <button className="btn btn-outline btn-primary" onClick={deleteAllMemo}>
+        모든 일기 삭제
+      </button>
       <form
         onSubmit={(e) => {
           addNewMemo(e);

@@ -18,6 +18,7 @@ export const useMemoStore = create(
         })),
       removeMemo: (id) =>
         set((prev) => ({ memoList: prev.memoList.filter((e) => e.id !== id) })),
+      removeAllMemo: () => set(() => ({ memoList: [] })),
     }),
     {
       name: "memo-list", // required, state를 저장하는 키, unique 해야 함
