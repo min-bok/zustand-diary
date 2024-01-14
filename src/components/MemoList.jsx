@@ -1,5 +1,5 @@
 import React from "react";
-import { Memo } from "../components";
+import { Memo, Noting } from "../components";
 import { useMemoStore } from "../store/MemoStore";
 
 export default function MemoList() {
@@ -9,7 +9,7 @@ export default function MemoList() {
     <>
       {/* scrollbar-hide */}
       {!!memoList.length ? (
-        <div className="grid grid-cols-4 auto-rows-max gap-4 overflow-y-auto h-4/6">
+        <div className="grid grid-cols-4 auto-rows-max gap-4 overflow-y-auto h-4/6 ">
           {memoList &&
             memoList.map((el) => (
               <Memo key={el.id} id={el.id} date={el.date}>
@@ -18,7 +18,7 @@ export default function MemoList() {
             ))}
         </div>
       ) : (
-        <p>메모 없음</p>
+        <Noting />
       )}
     </>
   );
